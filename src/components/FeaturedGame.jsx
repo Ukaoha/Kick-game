@@ -1,10 +1,20 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const FeaturedGame = ({
     title,
     image,
 }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
     return (
 
         <div className="relative  rounded-xl overflow-visible shadow-lg h-full w-full">
@@ -20,6 +30,9 @@ const FeaturedGame = ({
                         objectPosition: 'center',
                         transformOrigin: 'center',
                     }}
+
+
+
                 />
             </div>
 
@@ -28,5 +41,7 @@ const FeaturedGame = ({
 };
 
 export default FeaturedGame;
+
+
 
 

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { FaArrowDown, FaBell } from 'react-icons/fa';
 import { RiSearchLine, RiBellLine, RiUser3Line, RiMenuLine } from 'react-icons/ri';
-
+import bell from '../assets/bell.svg';
+import person from '../assets/person.svg';
+import arrowdown from '../assets/arrowicons.svg';
 const UserNav = () => {
     const [showMobileSearch, setShowMobileSearch] = useState(false);
 
@@ -29,7 +31,7 @@ const UserNav = () => {
 
             {/* Notifications */}
             <button className="p-2 text-gray-400 hover:text-white relative">
-                <FaBell size={22} />
+                <img src={bell} alt="Notification" />
                 <span className="absolute -top-1 -right-1 bg-kick-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                     1
                 </span>
@@ -38,10 +40,11 @@ const UserNav = () => {
             {/* User Profile */}
             <div className="flex items-center space-x-2 md:space-x-3">
                 <div className="w-8 h-8 md:w-9 md:h-9 bg-gray-700 rounded-full flex items-center justify-center">
-                    <RiUser3Line size={18} />
+                    <img src={person} />
                 </div>
                 <div className="hidden md:block">
-                    <FaArrowDown className="text-gray-400" size={14} />
+                    <img src={arrowdown} />
+
                 </div>
             </div>
         </div>

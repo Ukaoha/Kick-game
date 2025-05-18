@@ -11,7 +11,7 @@ const GameCard = ({
     rating,
 }) => {
     return (
-        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg relative">
+        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-md relative">
             <img
                 src={image}
                 alt={title}
@@ -29,9 +29,15 @@ const GameCard = ({
 
             <div className='flex justify-between items-center px-4 '>
                 {isNew && (
-                    <div className=" bg-kick-primary text-white text-xs font-bold px-2 py-1 rounded">
-                        NEW
-                    </div>
+                    <>
+                        <div className="absolute top-2 left-2 bg-kick-primary text-white text-xs font-bold px-2 py-1 rounded-tr rounded-bl z-10 md:hidden">
+                            NEW
+                        </div>
+
+                        <div className=" bg-kick-primary text-white text-xs font-bold px-2 py-1 rounded hidden md:block">
+                            NEW
+                        </div>
+                    </>
                 )}
 
 

@@ -1,6 +1,9 @@
+
+
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import UserNav from '../components/Usernav';
+import logo from '../assets/logo.svg';
 
 const MainLayout = ({ children, title }) => {
     const [isMobile, setIsMobile] = useState(false);
@@ -42,12 +45,21 @@ const MainLayout = ({ children, title }) => {
             >
                 {/* Top Navigation */}
                 <header className="bg-kick-dark h-16 px-4 md:px-6 flex items-center justify-between sticky top-0 z-10">
-                    <h2 className="font-semibold text-lg ml-8 md:ml-0">{title}</h2>
+                    {location.pathname === "/game-mode" ? (
+                        <div className="hidden md:block">
+                            <p className="font-normal text-base text-[#AFAFAF]">GMT- 02:48</p>
+                            <p className="text-sm text-[#AFAFAF]">12/04/24</p>
+                        </div>
+                    ) : (
+                        <h2 className="font-semibold text-lg hidden md:block">{title}</h2>
+                    )}
+                    <img src={logo} alt="Logo" className="md:hidden" />
+
                     <UserNav />
                 </header>
 
                 {/* Page Content */}
-                <main className="p-4 md:p-6">
+                <main className="p-4 md:p-6 overflow-y-auto no-scrollbar">
                     {children}
                 </main>
             </div>
@@ -56,5 +68,4 @@ const MainLayout = ({ children, title }) => {
 };
 
 export default MainLayout;
-
 

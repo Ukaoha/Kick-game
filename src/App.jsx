@@ -14,11 +14,10 @@ import VerifyOTP from './pages/auth/VerifyOtp'
 function App() {
   const [loading, setLoading] = useState(true)
 
-  // Simulate loading splash screen
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 3000)
 
     return () => clearTimeout(timer)
   }, [])
