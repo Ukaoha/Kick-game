@@ -9,7 +9,7 @@ const LoginScreen = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/verify-otp');
+        navigate('/game-mode');
     };
 
     return (

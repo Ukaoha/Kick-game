@@ -49,7 +49,7 @@ const VerifyOTP = () => {
         const otpValue = otp.join('');
         // Verify OTP logic here
         if (otpValue.length === 6) {
-            navigate('/game-mode');
+            navigate('/login');
         }
     };
 

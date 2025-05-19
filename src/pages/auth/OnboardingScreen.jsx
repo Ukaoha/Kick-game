@@ -9,7 +9,7 @@ const OnboardingScreen = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/login');
+        navigate('/verify-otp');
     };
 
     return (

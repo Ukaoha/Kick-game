@@ -25,7 +25,7 @@ const FeaturedGame = ({
                     src={image}
                     alt={title}
 
-                    className="w-100 h-100 object-contain transform scale-125 translate-y-16  "
+                    className="w-100 h-100 object-contain transform scale-150 md:scale-125 md:translate-y-16  -translate-y-10 "
                     style={{
                         objectPosition: 'center',
                         transformOrigin: 'center',

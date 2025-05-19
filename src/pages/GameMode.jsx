@@ -1,4 +1,3 @@
-
 import React from 'react';
 import FeaturedGame from '../components/FeaturedGame';
 import GameCard from '../components/GameCard';
@@ -62,9 +61,9 @@ const GameMode = () => {
         <MainLayout title="Home">
             <div className="bg-dark text-white min-h-screen">
                 {/* Featured Games Section */}
-                <section className="mb-12">
+                <section className="md:mb-12 mb-0 md:px-0 px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3">
-                        <div className="md:col-span-2 h-96">
+                        <div className="md:col-span-2 md:h-96 h-64 md:mt-0 mt-12">
                             <FeaturedGame {...featuredGames[0]} />
                         </div>
                         {/* Second featured game - hidden on mobile, visible on md and up */}
@@ -75,8 +74,8 @@ const GameMode = () => {
                 </section>
 
                 {/* All Games Section */}
-                <section className="px-4">
-                    <h2 className="text-2xl font-semibold mb-6">All Games</h2>
+                <section className="md:px-4 px-1">
+                    <h2 className="text-2xl font-semibold mb-4">All Games</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {gameCards.map(game => (
                             <GameCard key={game.id} {...game} />
